@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CustoRefeição {
+public class Uni3Exe06 {
 
 /*
 Análise: Ler peso do prato em quilos com comida e calcular o valor da refeição. OK.

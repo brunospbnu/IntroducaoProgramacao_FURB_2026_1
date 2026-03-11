@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Uni03Exe01 {
+public class Uni3Exe01 {
     //Análise: será considerado metros.
     //Entrada: largura, comprimento.
     //Saida: area.

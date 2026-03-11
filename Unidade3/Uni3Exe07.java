@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Uni3Exe7 {
+public class Uni3Exe07 {
 
 /*
 Análise: Clálcular quantos litros o comerciante comprou da fábrica considerando os diferentes tipos de recipientes.

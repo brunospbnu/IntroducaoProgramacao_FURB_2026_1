@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Classe {
+public class Uni3Exe02 {
     /* 
     Análise: OK. Valores em Reais.
     Entradas: valorProduto.

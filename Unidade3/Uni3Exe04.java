@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Notas {
+public class Uni3Exe04 {
 
     /*
     Análise: OK. Médias ponderadas das notas. Os pesos são fixos.

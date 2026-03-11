@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Abastecimento {
+public class Uni3Exe03 {
     /*
     Análise: Não foi informada a capacidade de litros do veiculo do motorista.
     Será considerado que o posto de gasolina tem combustível suficiente para abastecer o veículo do motorista.

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Granja {
+public class Uni3Exe05 {
 /*
 Análise: Calcular os gastos com compras de Chips e anais de identificação para frangos. OK.
 Entrada: quantFrangos.
