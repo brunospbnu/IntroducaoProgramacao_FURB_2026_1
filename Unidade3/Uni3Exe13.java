@@ -20,7 +20,7 @@ public class Uni3Exe13 {
         double alturaParede = teclado.nextDouble();
         double valorGasto = (comprimentoParede * alturaParede * 9) * 12.50;
         System.out.println("O valor final é: R$ " + valorGasto);
-
+        teclado.close();
 
     }
 }
