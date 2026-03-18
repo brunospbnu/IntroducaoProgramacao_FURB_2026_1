@@ -29,17 +29,17 @@ numNotas5 = valorFlutuante / 5;
 valorFlutuante = valorFlutuante % 5;
 numNotas2 = valorFlutuante / 2;
 valorFlutuante = valorFlutuante % 2;
-numMoedas1 = valorFlutuante / 1;
-valorFlutuante = valorFlutuante % 1;
-numMoedas050 = valorFlutuante / 0.50;
-valorFlutuante = valorFlutuante % 0.50;
-numMoedas025 = valorFlutuante / 0,25;
-valorFlutuante = valorFlutuante % 0,25;
-numMoedas010 = valorFlutuante / 0,10;
-valorFlutuante = valorFlutuante % 0,10;
-numMoedas005 = valorFlutuante / 0,05;
-valorFlutuante = valorFlutuante % 0,05;
-numMoedas001 = valorFlutuante / 0,01;
+int numMoedas1 = (int) valorFlutuante / 1;
+valorFlutuante = (valorFlutuante % 1)*100;
+int numMoedas050 = (int) valorFlutuante / 50;
+valorFlutuante = valorFlutuante % 50;
+int numMoedas025 = (int) valorFlutuante / 25;
+valorFlutuante = valorFlutuante % 25;
+int numMoedas010 = (int) valorFlutuante /10;
+valorFlutuante = valorFlutuante % 10;
+int numMoedas005 = (int) valorFlutuante /5;
+valorFlutuante = valorFlutuante % 5;
+int numMoedas001 = (int) valorFlutuante /1;
 
 escrever ("NOTAS:")
 escrever numNotas100 + "nota(s) de R$ 100,00"
@@ -61,7 +61,7 @@ import java.util.Scanner;
 public class Exe1021 {
     public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
-    double valorFlutuante = teclado.nextInt();
+    double valorFlutuante = teclado.nextDouble();
     int numNotas100 = (int) valorFlutuante / 100;
     valorFlutuante = (valorFlutuante % 100);
     int numNotas50 = (int) valorFlutuante / 50;
@@ -75,34 +75,30 @@ public class Exe1021 {
     int numNotas2 = (int) valorFlutuante / 2;
     valorFlutuante = valorFlutuante % 2;
     int numMoedas1 = (int) valorFlutuante / 1;
-    valorFlutuante = valorFlutuante % 1;
-    int numMoedas050 = ?????
-
-
-
-valorFlutuante = valorFlutuante % 0.50;
-numMoedas025 = valorFlutuante / 0,25;
-valorFlutuante = valorFlutuante % 0,25;
-numMoedas010 = valorFlutuante / 0,10;
-valorFlutuante = valorFlutuante % 0,10;
-numMoedas005 = valorFlutuante / 0,05;
-valorFlutuante = valorFlutuante % 0,05;
-numMoedas001 = valorFlutuante / 0,01;
-
-
+    valorFlutuante = (valorFlutuante % 1)*100;
+    int numMoedas050 = (int) valorFlutuante / 50;
+    valorFlutuante = valorFlutuante % 50;
+    int numMoedas025 = (int) valorFlutuante / 25;
+    valorFlutuante = valorFlutuante % 25;
+    int numMoedas010 = (int) valorFlutuante /10;
+    valorFlutuante = valorFlutuante % 10;
+    int numMoedas005 = (int) valorFlutuante /5;
+    valorFlutuante = valorFlutuante % 5;
+    int numMoedas001 = (int) valorFlutuante /1;
     System.out.println("NOTAS:");
-    System.out.println(numNotas100 + " nota(s) de R$ 100,00");
-    System.out.println(numNotas50 + " nota(s) de R$ 50,00");
-    System.out.println(numNotas20 + " nota(s) de R$ 20,00");
-    System.out.println(numNotas10 + " nota(s) de R$ 10,00");
-    System.out.println(numNotas5 + " nota(s) de R$ 5,00");
-    System.out.println(numNotas2 + " nota(s) de R$ 2,00");
-    System.out.println(numNotas1 + " nota(s) de R$ 1,00");
-    System.out.println("MOEDAS:")
-
-
-
-
+    System.out.println(numNotas100 + " nota(s) de R$ 100.00");
+    System.out.println(numNotas50 + " nota(s) de R$ 50.00");
+    System.out.println(numNotas20 + " nota(s) de R$ 20.00");
+    System.out.println(numNotas10 + " nota(s) de R$ 10.00");
+    System.out.println(numNotas5 + " nota(s) de R$ 5.00");
+    System.out.println(numNotas2 + " nota(s) de R$ 2.00");
+    System.out.println("MOEDAS:");
+    System.out.println(numMoedas1 + " moeda(s) de R$ 1.00");
+    System.out.println(numMoedas050 + " moeda(s) de R$ 0.50");
+    System.out.println(numMoedas025 + " moeda(s) de R$ 0.25");
+    System.out.println(numMoedas010 + " moeda(s) de R$ 0.10");
+    System.out.println(numMoedas005 + " moeda(s) de R$ 0.05");
+    System.out.println(numMoedas001 + " moeda(s) de R$ 0.01");
     teclado.close();
     }
 }
