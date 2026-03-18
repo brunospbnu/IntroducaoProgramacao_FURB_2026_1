@@ -11,8 +11,6 @@ minutos = (n % 3600) / 60
 segundos = (n % 3600) %60
 escrever horas+":"+minutos+":"+segundos
 */
-
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exe1019 {
