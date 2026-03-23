@@ -17,10 +17,10 @@ public class Exe1010 {
     public static void main(String[] args) throws Exception {
     DecimalFormat df = new DecimalFormat("0.00");
     Scanner leitor = new Scanner(System.in);
-    int codPeca1 = leitor.nextInt();
+    //Desnecessário: int codPeca1 = leitor.nextInt();
     int numPeca1 = leitor.nextInt();
     double valorPeca1 = leitor.nextDouble();
-    int codPeca2 = leitor.nextInt();
+   //Desnecessário: int codPeca2 = leitor.nextInt();
     int numPeca2 = leitor.nextInt();
     double valorPeca2 = leitor.nextDouble();
     double valorPagar = (numPeca1 *valorPeca1) + (numPeca2 * valorPeca2);
