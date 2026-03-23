@@ -39,6 +39,8 @@ public class Uni4Exe07 {
         }
         else {
             custoExtra = 0.45 *(((pesoCarta - 50)/20) + 1);
+            // O mais 1 foi colocado acima pois o valor extra sempre e somado inteiramente.
+            // Ou seja, mesmo que fechem 10 gramas adicionais vai ser cobrado 0.45, nunca apenas uma parte desse valor. 
             custoSelo = custoSelo + custoExtra;
             System.out.println("O custo do Selo é de R$ " + custoSelo);}
         teclado.close();
