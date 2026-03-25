@@ -49,7 +49,7 @@ public class Uni4Exe18 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("--- Programa para calcular o valor de uma prestasão, considerando descontos e multas conforme o caso ---");
+        System.out.println("--- Programa para calcular o valor de uma prestação, considerando descontos e multas conforme o caso ---");
         System.out.println("Digite o dia do vencimento da parcela:");
         int diaVencimento = teclado.nextInt();
         System.out.println("Digite o dia do pagamento:");
