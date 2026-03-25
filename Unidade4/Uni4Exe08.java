@@ -30,7 +30,15 @@ public class Uni4Exe08 {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Verificador de Vogal --- Digite uma letra abaixo");
         char letra = teclado.next().charAt(0);
+        /*
+        Poderia ser usado também a variavel String.
+        O char trabalha com aspas simples e o String com aspas duplas.
+        */
         letra = Character.toUpperCase(letra);
+        /*
+        toLowerCase colca tudo em minusculo
+        toUpperCase colova tudo em maiusculo
+        */
         if (letra == 'A' || letra == 'E'|| letra == 'I' || letra == 'O'|| letra == 'U') {
             System.out.println("É vogal");
         }
