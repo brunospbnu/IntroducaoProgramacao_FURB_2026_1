@@ -47,7 +47,9 @@ public class Uni4Exe22 {
             case 2 : titulo = "Licenciado em Computação";
             break;
             case 3 : titulo = "Bacharel em Sistemas de Informação";
-            break; }
+            break; 
+            default: titulo = "Opção inválida";
+        }
 
         System.out.println("A titulação do aluno será: " + titulo);
 
