@@ -21,55 +21,16 @@ minSaida
 
 
 Saida:
+horasPerm
+minPerm
 precoCobrado
 
-
-Algoritmo:
-ler as entradas.
-
-horas = horaSaida - horaChegada
-horasEmMin = horas * 60
-min = minSaida - minChegada
-diferencaEmMin = horasEmMin + min
-
-horasPerm = diferencaEmMin / 60
-minPerm = diferencaEmMin % 60
-
-escrever "O tempo de permanênica foi de " + horasPerm +" horas e " + minPerm + " minutos."
-
-Se diferencaEmMin < 1440 && > 0
-
-    Se diferencaEmMin < 60
-    precoCobrado = 5
-
-    Senão se diferencaEmMin > 60 && diferencaEmMin < 90
-    precoCobrado = 5
-
-    Senão se diferencaEmMin >= 90 && diferencaEmMin < 150
-    precoCobrado = 10
-
-    Senão se diferencaEmMin >= 150 && diferencaEmMin < 210
-    precoCobrado = 17,5
-
-    Senão se diferencaEmMin >= 210 && diferencaEmMin < 270
-    precoCobrado = 25
-
-    Senão se diferencaEmMin >= 270 && diferencaEmMin < 330
-    precoCobrado = 35
-
-    Senão se diferencaEmMin >= 330
-    quantHorasMais = diferencaEmMin / 330
-    precoCobrado = 35 + (10 * quantHorasMais)
-
-escrever "Preço Cobraro = " + precoCobrado
-
-Senão
-escrever "Tempo informado incorretamente"
 
 
 */
 public class Uni4Exe27 {
     public static void main(String[] args) {
+        // Ler as entradas: 
         Scanner teclado = new Scanner(System.in);
         System.out.println("--- Programa para calcular o tempo estacionado de um carro e o valor cobrado ---");
         System.out.println("Insira a Hora da Chegada");
