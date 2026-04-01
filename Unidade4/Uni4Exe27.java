@@ -68,6 +68,24 @@ public class Uni4Exe27 {
         // 3. Calcula o preço baseado NAS HORAS REDONDAS
         double precoCobrado = 0;
         
+        switch (horasCobradas) {
+            // 1ª e 2ª hora custam 5 reais cada
+            case 1:
+            case 2:
+            precoCobrado = horasCobradas * 5.0;
+            break;
+            // Se ficou 3 ou 4 horas: Paga R$ 10 (pelas duas primeiras) + R$ 7,50 por hora extra
+            case 3:
+            case 4:
+            precoCobrado = 10.0 + ((horasCobradas - 2) * 7.5);
+            default:
+                 precoCobrado = 25.0 + ((horasCobradas - 4) * 10.0);
+                break;
+        }
+
+        /*
+        Se fosse com if seria:
+        
         if (horasCobradas == 1 || horasCobradas == 2) {
             // 1ª e 2ª hora custam 5 reais cada
             precoCobrado = horasCobradas * 5.0;
@@ -80,6 +98,7 @@ public class Uni4Exe27 {
             // Se ficou 5 ou mais: Paga R$ 25 (pelas quatro primeiras) + R$ 10,00 por hora extra
             precoCobrado = 25.0 + ((horasCobradas - 4) * 10.0);
         }
+        */
 
         System.out.println("Preço Cobrado = " + precoCobrado);
     
