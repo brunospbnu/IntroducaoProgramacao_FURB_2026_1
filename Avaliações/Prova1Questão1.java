@@ -22,6 +22,7 @@ public class Prova1Questão1 {
             resultado = "Reprovado por falta";
         }
 
+        // Segundo o fluxograma da avaliação a segunda condição deveria ser apenas IF.
         else if (media >= 7) {
             resultado = "Aprovado";
         }
