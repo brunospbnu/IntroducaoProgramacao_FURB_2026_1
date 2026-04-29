@@ -8,7 +8,7 @@ public class Uni5Exe10 {
 
 
 
-        for (int contagem = 1; contagem <= 10; contagem++) {
+        for (int contagem = 1000; contagem <= 9999; contagem++) {
 
  // EM IMPLEMENTAÇÃO !!! PENDENTE.
 
