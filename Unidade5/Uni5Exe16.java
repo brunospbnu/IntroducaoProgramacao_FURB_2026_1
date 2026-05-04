@@ -9,7 +9,7 @@ public class Uni5Exe16 {
         System.out.println("A leitura finalizará ao digitar 0 para a altura de qualquer pessoa");
 
         double alturaAtual = 1;
-        char generoAtual;
+        char generoAtual = 'X';
         double somaAlturaMulheres = 0;
         double somaAlturaTodos = 0;
         int quantidadePessoas = 0;
@@ -24,15 +24,22 @@ public class Uni5Exe16 {
                 System.out.print("Digite o gênero da pessoa (F = Feminino / M = Masculino / O = Outro): ");
                 generoAtual = teclado.next().charAt(0);
                 generoAtual = Character.toUpperCase(generoAtual);
+
+                while (generoAtual != 'F' && generoAtual != 'M' && generoAtual != 'O') {
+                    System.out.println("O gênero informado é incorreto - Informar novamente o gênero !!! ");
+                    generoAtual = teclado.next().charAt(0);
+                    generoAtual = Character.toUpperCase(generoAtual);
+                }
                 quantidadePessoas++;
                 somaAlturaTodos =  somaAlturaTodos + alturaAtual;
                     if (generoAtual == 'F') {
                     somaAlturaMulheres = somaAlturaMulheres + alturaAtual;
                     quantidadeMulheres++;
+                    }
             }
             System.out.println(" Proxima pessoa abaixo: ");
             }
-        }
+        
 
         double mediaAlturaMulheres = somaAlturaMulheres / quantidadeMulheres;
         double mediaAlturaTodos = somaAlturaTodos / quantidadePessoas;
