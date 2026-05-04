@@ -9,9 +9,13 @@ public class Uni5Exe07 {
         System.out.print("Digite o valor de N: ");
         int n = teclado.nextInt();
         int repeticoes = 0;
-        double numeroMaior = 0;
+        
+        // Seria possível realizar também com numeroMaior = Integer.MAX_VALUE e  Integer.MIN_VALUE
+        
+        double numeroMaior = 0; 
         double numeroMenor = 0;
         double numeroAtual;
+
         for (repeticoes = 1; repeticoes <= n; repeticoes++){
             System.out.print("Digite o número real de posição nº " + repeticoes + " : ");
             numeroAtual = teclado.nextDouble();
