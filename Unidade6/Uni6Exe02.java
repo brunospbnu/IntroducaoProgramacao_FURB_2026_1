@@ -20,8 +20,8 @@ public class Uni6Exe02 {
 
         double valoresReais[] = new double[12];
 
-        for (int i = 0; i < 12; i++) {
-            System.out.print("Digite o número real de posição " + i + ": ");
+        for (int i = 0; i < valoresReais.length; i++) {
+            System.out.print("Digite o número real de posição " + (i+1) + ": ");
             valoresReais[i] = s.nextDouble();
             }
             s.close();
@@ -31,11 +31,11 @@ public class Uni6Exe02 {
     private double Media(double valoresReais[]) {
         double soma = 0;
 
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < valoresReais.length; i++) {
             soma =  soma + valoresReais[i];
         }
 
-        double media = soma / 12.00;
+        double media = soma / valoresReais.length;
 
         return media;
     }
@@ -45,10 +45,13 @@ public class Uni6Exe02 {
 
         System.out.println("Média = " + media);
 
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < valoresReais.length; i++) {
+
            if (valoresReais[i] > media) {
+
             System.out.println("O valor " + valoresReais[i] + " é maior que a média");
-           }
+           
+            }
         }
     }
 
