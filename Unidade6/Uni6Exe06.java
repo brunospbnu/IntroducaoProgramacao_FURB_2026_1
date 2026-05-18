@@ -8,24 +8,22 @@ public class Uni6Exe06 {
         Scanner s = new Scanner(System.in);
         int n = 0;
 
-        n = lerN(s, n);
+        n = lerN(s);
 
         double vetorReal[] = new double[n];
 
         vetorReal = popularVetor(s, vetorReal);
 
-        boolean encontrado = false;
-
-        encontrado = encontrarValor(s, vetorReal, encontrado);
+        boolean encontrado = encontrarValor(s, vetorReal);
 
         responder(encontrado);
 
         s.close();
     }
 
-    private int lerN(Scanner s, int n) {
+    private int lerN(Scanner s) {
         System.out.print("Digite o Valor de N (quantidade de valores a serem analisados): ");
-        n = s.nextInt();
+        int n = s.nextInt();
         return n;
     }
 
@@ -37,20 +35,17 @@ public class Uni6Exe06 {
         return vetorReal;
     }
 
-    private boolean encontrarValor(Scanner s, double vetorReal[], boolean encontrado) {
+    private boolean encontrarValor(Scanner s, double vetorReal[]) {
         System.out.print("Digite o valor a ser procurado no vetor: ");
         double valorAProcurar = s.nextDouble();
 
         for (int i = 0; i < vetorReal.length; i++) {
             if (valorAProcurar == vetorReal[i]) {
-                encontrado = true;
-            }
-            else {
-                encontrado = false;
+                return true;
             }
         }
 
-        return encontrado;
+        return false;
     }
 
     private void responder(boolean encontrado) {
@@ -60,8 +55,7 @@ public class Uni6Exe06 {
         else {
             System.out.println("O valor não está cadastrado");
         }
-
-    };
+    }
             
     public static void main(String[] args) {
         new Uni6Exe06();
