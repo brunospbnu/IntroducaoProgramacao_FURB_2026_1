@@ -14,7 +14,11 @@ public class Uni6Exe06 {
 
         vetorReal = popularVetor(s, vetorReal);
 
-        encontrarValor(s, vetorReal);
+        boolean encontrado = false;
+
+        encontrado = encontrarValor(s, vetorReal, encontrado);
+
+        responder(encontrado);
 
         s.close();
     }
@@ -33,22 +37,31 @@ public class Uni6Exe06 {
         return vetorReal;
     }
 
-    private void encontrarValor(Scanner s, double vetorReal[]) {
+    private boolean encontrarValor(Scanner s, double vetorReal[], boolean encontrado) {
         System.out.print("Digite o valor a ser procurado no vetor: ");
         double valorAProcurar = s.nextDouble();
 
         for (int i = 0; i < vetorReal.length; i++) {
             if (valorAProcurar == vetorReal[i]) {
-                System.out.println("O valor " + valorAProcurar + " foi encontrado na posição nº " + (i+1) + " do vetor");
+                encontrado = true;
             }
             else {
-                if(i == vetorReal.length-1 && valorAProcurar == vetorReal[i] )
-                    {
-                    System.out.println("O número não foi encontrado"); }
+                encontrado = false;
             }
         }
 
+        return encontrado;
     }
+
+    private void responder(boolean encontrado) {
+        if (encontrado) {
+            System.out.println("O valor encontra-se cadastrado");
+        }
+        else {
+            System.out.println("O valor não está cadastrado");
+        }
+
+    };
             
     public static void main(String[] args) {
         new Uni6Exe06();
