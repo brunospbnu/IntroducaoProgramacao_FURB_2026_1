@@ -54,7 +54,7 @@ public class Uni6Exe07 {
         return vetorInteiro;
     }
 
-    private int[] ordenarVetor(int vetorInteiro[]) {
+    private int[] ordenarVetor(int vetorInteiro[]) { //método bolha.
 
         int[] vetorOrdenado = vetorInteiro.clone();
 
