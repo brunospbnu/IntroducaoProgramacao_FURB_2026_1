@@ -13,7 +13,7 @@ public class Uni6Exe10 {
 
     private void menu(Scanner teclado, int opcao) {
         System.out.println("---- Programa para trabalhar com valores em um vetor ----");
-        int[] vetorNumInteiros = new int[5];
+        int[] vetorNumInteiros = new int[50];
         do {
             System.out.println(" Selecione uma opção: \n \r 1 - Incluir valor \n\r 2 - Pesquisar Valor" +
                                 "\n\r 3 - Alterar valor \n\r 4 - Excluir valor \n\r 5 - Mostrar valores" +
@@ -57,6 +57,7 @@ public class Uni6Exe10 {
                 inverterValores(vetorNumInteiros);
                 break;
             case 8:
+                System.out.println("Encerrando o sistema !!!");
                 break;
         }
     }
@@ -64,7 +65,7 @@ public class Uni6Exe10 {
     private void incluirValor(int[] vetorNumInteiros, Scanner teclado) {
         System.out.print("Informe o valor a ser incluido: ");
         int valorAIncluir = teclado.nextInt();
-        for (int i = vetorNumInteiros.length - 1; i >= 0 ; i--) {
+        for (int i = 0; i < vetorNumInteiros.length; i++) {
             if (vetorNumInteiros[i] == 0) {
                 vetorNumInteiros[i] = valorAIncluir;
                 System.out.println("----------------------------------------------------------- \n\r " +
@@ -72,7 +73,7 @@ public class Uni6Exe10 {
                                     "\n\r------------------------------------------------------------");
                 break;
             }
-            else if (vetorNumInteiros[0] != 0) {
+            else if (i == vetorNumInteiros.length - 1) {
                 System.out.println("-----------------------------------------------------------\n\r " +
                                     "O valor não foi incluido pois o vetor está cheio" +
                                      "\n\r------------------------------------------------------------");
@@ -145,39 +146,49 @@ public class Uni6Exe10 {
     private void mostrarValores(int[] vetorNumInteiros) {
         System.out.println("Exibindo todos os itens do vetor: ");
         for (int i = 0; i < vetorNumInteiros.length; i++) {
+            if (vetorNumInteiros[i] == 0) {
+                break; // Para de imprimir assim que achar o primeiro zero
+            }
             System.out.println("Posição "+ (i+1) + " valor = " + vetorNumInteiros[i]);
         }
         System.out.println("-----------------------------");
     }
 
     private void ordenarValores(int[] vetorNumInteiros) {
+        // 1. Descobre quantos números reais existem antes do primeiro zero
+        int qtd = 0;
         for (int i = 0; i < vetorNumInteiros.length; i++) {
-            
-            for (int j = 0; j < vetorNumInteiros.length - 1; j++) {
-                
-                // Se o número atual for MAIOR que o número do lado direito...
+            if (vetorNumInteiros[i] != 0) qtd++;
+            else break;
+        }
+
+        // 2. Faz o seu Bubble Sort normal, mas trocando o "length" pelo "qtd"
+        for (int i = 0; i < qtd; i++) {
+            for (int j = 0; j < qtd - 1 - i; j++) {
                 if (vetorNumInteiros[j] > vetorNumInteiros[j + 1]) {
-                    
-                    // ...hora de fazer a troca usando o "copo vazio" (auxiliar)
-                    int auxiliar = vetorNumInteiros[j];       // 1. O copo vazio guarda o valor atual
-                    vetorNumInteiros[j] = vetorNumInteiros[j + 1];       // 2. O atual recebe o valor do vizinho (que era menor)
-                    vetorNumInteiros[j + 1] = auxiliar;       // 3. O vizinho recebe o valor que estava guardado no copo
+                    int auxiliar = vetorNumInteiros[j];
+                    vetorNumInteiros[j] = vetorNumInteiros[j + 1];
+                    vetorNumInteiros[j + 1] = auxiliar;
                 }
             }
-
         }
         System.out.println("O vetor foi colocado em ordem crescente \n\r ---------------------------------------");
     }
 
     private void inverterValores(int[] vetorNumInteiros) {
-         int temp = 0;
-            for (int i = 0; i < vetorNumInteiros.length; i++) {
-                for (int x = 0; x < i; x++) {
-                temp = vetorNumInteiros[i];
-                vetorNumInteiros[i] = vetorNumInteiros[x];
-                vetorNumInteiros[x] = temp;
-                }
-            }
+        // Descobre quantos números reais tem
+        int qtd = 0;
+        for (int i = 0; i < vetorNumInteiros.length; i++) {
+            if (vetorNumInteiros[i] != 0) qtd++;
+            else break;
+        }
+
+        // Inverte só até a metade da quantidade válida
+        for (int i = 0; i < qtd / 2; i++) {
+            int temp = vetorNumInteiros[i];
+            vetorNumInteiros[i] = vetorNumInteiros[qtd - 1 - i]; // Pega o número lá do outro lado
+            vetorNumInteiros[qtd - 1 - i] = temp;
+        }
         System.out.println("As posições dos valores foram invertidas !!! \n\r ---------------------------------------");
     }
     public static void main(String[] args) {
