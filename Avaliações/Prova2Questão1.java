@@ -39,6 +39,7 @@ public class Prova2Questão1 {
                             if (quantVagas <= quantParticipantesOficinaAtual) {
                                 break;
                             }
+                            System.out.println("Participante " + nomeParticipanteAtual + " cadastrado");
                             System.out.print("Deseja cadastrar outro participante para essa oficina? (1 = SIM / 2 = NÃO)");
                             escolha = teclado.nextInt();
                             if (escolha < 1 || escolha > 2) {
